@@ -8,15 +8,15 @@ package ru.job4j.calculate;
  */
 
 public class Fit {
-    private final double Ideal_weigth_for_man = 100.0;
+    private static final double IDEAL_WEIGHT_FOR_MAN = 100.0;
     /**
      * Для формулы мужского веса.
      */
-    private final double Ideal_weigth_for_woman = 110.0;
+    private static final double IDEAL_WEIGHT_FOR_WOMAN = 110.0;
     /**
      * Для формулы женского веса.
      */
-    private final double Formula_constant = 1.15;
+    private static final double FORMULA_CONSTANT = 1.15;
     /**
      * Множитель для формул.
      */
@@ -26,7 +26,7 @@ public class Fit {
      * @return идеальный вес.
      */
     public double manWeight(double height) {
-        return (height - Ideal_weigth_for_man) * Formula_constant;
+        return (height - IDEAL_WEIGHT_FOR_MAN) * FORMULA_CONSTANT;
     }
 
     /**
@@ -35,7 +35,7 @@ public class Fit {
      * @return идеальный вес.
      */
     public double womanWeight(double height) {
-        return (height - Ideal_weigth_for_woman) * Formula_constant;
+        return (height - IDEAL_WEIGHT_FOR_WOMAN) * FORMULA_CONSTANT;
     }
 }
 
